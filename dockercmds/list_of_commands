@@ -16,3 +16,5 @@ docker exec -it <cid> redis-cli  (-it is for input / output for commands to run 
 
 docker stop <cid>
 docker kill <cid>
+
+docker build .   # this is build docker image from a dockerfile
