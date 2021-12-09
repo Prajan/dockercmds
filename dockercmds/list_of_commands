@@ -1,1 +1,18 @@
+docker run hello-world
+docker run busybox
+docker run busybox echo Hi Prajan 
+
+docker run hello-world  # is actually running below 2 commands
+docker create hello-world
+docker start <container id>
+
+docker logs <c id>
+
 docker ps
+
+docker run redis
+docker exec -it <cid> redis-cli  (-it is for input / output for commands to run )
+
+
+docker stop <cid>
+docker kill <cid>
