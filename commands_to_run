@@ -9,3 +9,6 @@ docker run -p 5000:8080 prajanshrestha/simpleweb (input browser port can be 5000
 
 docker run -it prajanshrestha/simpleweb sh (run the shell for this image container)
 ls   (all node files are copied to root directory.) (use WIRDIR in Dockerfile to copy app file to t /usr/app location)
+
+docker ps 
+docker exec -it <container id>

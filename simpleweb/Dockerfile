@@ -4,7 +4,7 @@
 FROM node:apline   
 
 #copy the node application programs in /app directory. Better way to manage programs best place
-COPY /usr/app
+WORKDIR /usr/app
 
 #copy the project files to root folder in container
 COPY ./ ./
