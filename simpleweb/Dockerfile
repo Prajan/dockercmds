@@ -7,10 +7,11 @@ FROM node:apline
 WORKDIR /usr/app
 
 #copy the project files to root folder in container
-COPY ./ ./
-
+COPY ./package.json ./
 #install some dependencies
 RUN npm install
+
+COPY ./ ./ 
 
 #default command
 CMD ["npm", "start"]
