@@ -1,3 +1,13 @@
+Install npm in Ubuntu / Install Node.js in Ubuntu
+
+sudo apt update
+sudo apt install nodejs npm
+
+nodejs --version
+
+
+==============
+
 docker build .
 
 docker build -t prajanshrestha/simpleweb .  (tag the image so that we dont need to use image id)
@@ -12,3 +22,16 @@ ls   (all node files are copied to root directory.) (use WIRDIR in Dockerfile to
 
 docker ps 
 docker exec -it <container id>
+
+==============
+NOTE to remember:
+For this example, localhost:8080 did not work. Steps below to make it working.
+1. Install nodejs and npm.
+2. Make sure to have port forwarding. If you dont do -p then ip of container will be different (172.17.0.2)
+docker inspect <c_id>
+docker run -p 8080:8080 prajanshrestha/simpleweb
+
+3. also try using curl in cmd prompt. curl http://localhost:8080
+4. In browser, use http://localhost:8080 and not https
+
+

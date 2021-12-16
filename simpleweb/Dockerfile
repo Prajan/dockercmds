@@ -1,7 +1,7 @@
 #specify the base image
 
 #check node from hub.docker.com repository. This is the stripped down version of the apline version of the node image
-FROM node:apline   
+FROM node:alpine   
 
 #copy the node application programs in /app directory. Better way to manage programs best place
 WORKDIR /usr/app
