@@ -5,22 +5,28 @@
 4. If Docker daemon is not running: sudo dockerd
 5. if you want to open the current folder from Linux bash in Windows folder: explorer.exe .
 
-== This is How to create 04frontend project? ==================
+== This is How to create 05frontend project? ==================
 1. Get latest version of Ubuntu  (https://joshtronic.com/2021/05/09/how-to-install-nodejs-16-on-ubuntu-2004-lts/  )
 2. get at least version 16 of Nodejs
 3. Install React app framework: sudo npm install -g create-react-app
-4. Create a React project inside folder 04frontend: create-react-app 04frontend
+4. Create a React project inside folder 05frontend: create-react-app 05frontend
 5. Go inside the project and run commands in Ubuntu terminal
           npm run test
           npm run build 
           npm run start 
 
 7. Create Dockerfile.dev for Development machine
-8. Run command: docker build -f Dockerfile.dev .
+8. Run command: docker build -f Dockerfile.dev .  OR  docker build -t ps/05frontend -f Dockerfile.dev .
 9. Ruuning command 8 was slow so have to remove nodejs and npm. And followed https://coderedirect.com/questions/486048/why-is-npm-install-really-slow
 9. Delete dependency by deleting folder node_modules
 10. Run the container using command:  docker run <c_id>
 11. Command 10 does not work. We have to do port mapping: docker run -p 3001:3000 <c_id>
 12. Use of Volumes. using volumes to map will help us to write code and without re-building image, changes appear in the browser. 
 sudo docker run -p 3003:3000 -v /app/node_modules -v $(pwd):/app 2fdb088eb41
+or 
+sudo docker run -p 3003:3000 -v /app/node_modules -v $(pwd):/app ps/05frontend
+
 now change something in app.js file and see the changes in the browser http://localhost:3003
+
+sudo -i
+cd /root
