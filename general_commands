@@ -9,8 +9,6 @@ git clone vs git checkout => Clone is to download all the remote repo to your lo
     git config --global user.name "Prajan"
 
 
-
-
 ----------------------------------------------------------------------------------------------------------------------------
 
 
