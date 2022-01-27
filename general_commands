@@ -1,22 +1,13 @@
 
-
-
-
-
 ---------------------------------------------------------------------------------------------------------------------------------
-If doing for the first time, then use command git clone 
+1. If doing for the first time, then use command git clone 
 git clone https://github.com/Prajan/dockercmds.git
 
 git clone vs git checkout => Clone is to download all the remote repo to your local folder. git checkout is to get only few files or folders
 
-git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
+2. git config --global user.email "prajan.shrestha@gmail.com"
+    git config --global user.name "Prajan"
 
-to set your account's default identity.
-Omit --global to set the identity only in this repository.
-
-fatal: no email was given and auto-detection is disabled
-> git config --get-all user.name
 
 
 
